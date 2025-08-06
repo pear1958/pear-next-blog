@@ -2,6 +2,7 @@ import { cookies } from 'next/headers'
 import AntdProvider from '@/plugin/antd'
 import './globals.css'
 import { getUserInfo } from '@/api/modules/auth'
+import { UserStoreProvider } from '@/hooks/useUserData'
 
 type Children = Readonly<{
   children: React.ReactNode
@@ -10,7 +11,7 @@ type Children = Readonly<{
 const RootLayout = async ({ children }: Children) => {
   const cookie = await cookies()
   const token = cookie.get('token')
-  let userInfo = null
+  let userInfo = { data: null }
 
   // try {
   //   const { data } = await getUserInfo()
@@ -20,7 +21,9 @@ const RootLayout = async ({ children }: Children) => {
   return (
     <html lang="en">
       <body>
-        <AntdProvider>{children}</AntdProvider>
+        <UserStoreProvider data={userInfo}>
+          <AntdProvider>{children}</AntdProvider>
+        </UserStoreProvider>
       </body>
     </html>
   )
