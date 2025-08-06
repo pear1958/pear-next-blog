@@ -29,6 +29,9 @@ importers:
       next:
         specifier: 15.4.5
         version: 15.4.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      pear-common-utils:
+        specifier: ^1.1.8
+        version: 1.1.8
       react:
         specifier: 19.1.0
         version: 19.1.0
@@ -750,6 +753,9 @@ packages:
         optional: true
       sass:
         optional: true
+
+  pear-common-utils@1.1.8:
+    resolution: {integrity: sha512-FXHDsycErUYCTpnk+ng8um3g4iIg+lWC/lli3oDrGNJrbCQZxtMB73GROpxlYJLtxQLLEON5kD1FWLdY6Yz3wA==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -1743,6 +1749,8 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+
+  pear-common-utils@1.1.8: {}
 
   picocolors@1.1.1: {}
 
