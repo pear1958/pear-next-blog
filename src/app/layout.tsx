@@ -1,8 +1,9 @@
 import { cookies } from 'next/headers'
 import AntdProvider from '@/plugin/antd'
-import './globals.css'
 import { getUserInfo } from '@/api/modules/auth'
 import { UserStoreProvider } from '@/hooks/useUserData'
+import './globals.css'
+import '@/styles/reset.css'
 
 type Children = Readonly<{
   children: React.ReactNode
