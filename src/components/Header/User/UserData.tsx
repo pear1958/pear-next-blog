@@ -16,7 +16,6 @@ const UserData = () => {
         placement="bottomLeft"
         arrow
         onClick={() => router.push('/creator')}
-        open
         dropdownRender={() => (
           <div className="flex items-center rounded-sm bg-white p-2 shadow-md">
             <div
@@ -28,6 +27,7 @@ const UserData = () => {
                 height={44}
                 src="/icon/client/write-article.svg"
                 alt="icon"
+                className="h-[44px]"
               />
               <div className="text-gray-700">写文章</div>
             </div>
@@ -36,7 +36,13 @@ const UserData = () => {
               className="cursor-pointer p-3"
               onClick={() => router.push('/creator/content/article?key=draft')}
             >
-              <Image width={44} height={44} src="/icon/client/drafts.svg" alt="icon" />
+              <Image
+                width={44}
+                height={44}
+                src="/icon/client/drafts.svg"
+                alt="icon"
+                className="h-[44px]"
+              />
               <div className="text-gray-700">草稿箱</div>
             </div>
 
@@ -44,7 +50,13 @@ const UserData = () => {
               className="cursor-pointer p-3"
               onClick={() => router.push('/problem/editor')}
             >
-              <Image width={44} height={44} src="/icon/client/problem.svg" alt="icon" />
+              <Image
+                width={44}
+                height={44}
+                src="/icon/client/problem.svg"
+                alt="icon"
+                className="h-[44px]"
+              />
               <div className="text-gray-700">提问题</div>
             </div>
           </div>
