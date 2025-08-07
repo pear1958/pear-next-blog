@@ -2,7 +2,7 @@ import { cookies } from 'next/headers'
 import AntdProvider from '@/plugin/antd'
 import { getUserInfo } from '@/api/modules/auth'
 import { UserStoreProvider } from '@/hooks/useUserData'
-import './globals.css'
+import '@/styles/index.scss'
 import '@/styles/reset.css'
 
 type Children = Readonly<{

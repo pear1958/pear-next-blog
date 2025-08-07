@@ -16,7 +16,7 @@ const UserData = () => {
         placement="bottomLeft"
         arrow
         onClick={() => router.push('/creator')}
-        // open
+        open
         dropdownRender={() => (
           <div className="flex items-center rounded-sm bg-white p-2 shadow-md">
             <div
