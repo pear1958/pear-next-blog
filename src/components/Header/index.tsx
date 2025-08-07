@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import Navigation from './Navigation'
 import SearchInput from './SearchInput'
+import User from './User'
 
 const Header = () => {
   const [isShrink, setIsShrink] = useState(false)
@@ -47,6 +48,7 @@ const Header = () => {
         <div className="mx-auto flex h-12 max-w-[1440px] items-center justify-between px-6">
           <Navigation />
           <SearchInput />
+          <User />
         </div>
       </div>
     </header>
