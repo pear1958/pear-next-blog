@@ -5,6 +5,8 @@ import classNames from 'classnames'
 import Navigation from './Navigation'
 import SearchInput from './SearchInput'
 import User from './User'
+import Notification from './Notification'
+import Avatar from './Avatar'
 
 const Header = () => {
   const [isShrink, setIsShrink] = useState(false)
@@ -48,7 +50,11 @@ const Header = () => {
         <div className="mx-auto flex h-12 max-w-[1440px] items-center justify-between px-6">
           <Navigation />
           <SearchInput />
-          <User />
+          <div className="flex items-center">
+            <User />
+            <Notification className="mx-8" />
+            <Avatar />
+          </div>
         </div>
       </div>
     </header>
