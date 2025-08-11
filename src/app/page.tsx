@@ -1,9 +1,12 @@
-'use client'
-
 import HeadInfo from '@/components/HeadInfo'
 import Header from '@/components/Header'
 
-export default function Home() {
+import { getArticleList, getTypeTree } from '@/api/modules/article'
+import Content from '@/components/Content'
+
+const Home = async () => {
+  const reponse = (await Promise.all([getTypeTree(), getArticleList()])) as any
+
   return (
     <>
       <HeadInfo
@@ -14,11 +17,11 @@ export default function Home() {
 
       <Header />
 
-      {Array(300)
-        .fill('')
-        .map((_, index) => (
-          <div key={index}>111</div>
-        ))}
+      <Content type={reponse[0]} article_list={reponse[1]}>
+        <div>111</div>
+      </Content>
     </>
   )
 }
+
+export default Home
