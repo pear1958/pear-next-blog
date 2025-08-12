@@ -20,6 +20,15 @@ const nextConfig: NextConfig = {
         ],
       }
     : undefined,
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap/[type]/index:path*.xml',
+        // 实际路由文件名是 index[index].xml
+        destination: '/sitemap/[type]/index[index].xml',
+      },
+    ]
+  },
 }
 
 export default nextConfig
